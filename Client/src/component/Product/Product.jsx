@@ -38,7 +38,10 @@ const Product = ({product, onAdd }) => {
             </div>
             <p>{product.name}</p>
             <p className="price">R${product.price}</p>
-            <button className="addCart" onClick={() => onAdd(product)}>
+            <button className="addCart" onClick={() => {
+                onAdd(product);
+                window.alert("Produto adicionado ao carrinho");
+                }}>
                 <img src={cartImage} alt="" />
                 <p>Add to Cart</p>
             </button>

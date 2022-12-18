@@ -5,7 +5,7 @@ import Products from '../Products/Products';
 const Search = ({products, onAdd}) => {
     let { searchParam } = useParams();
 
-    const searchResult = products.filter((product) => (product.title.toLowerCase().includes(searchParam.toLowerCase())));
+    const searchResult = products.filter((product) => (product.name.toLowerCase().includes(searchParam.toLowerCase())));
 
     return ( 
         <Products products={searchResult} onAdd={onAdd} />

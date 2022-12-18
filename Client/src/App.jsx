@@ -183,7 +183,7 @@ const App = () => {
                 <>
                   <Header />
                   <div className="productsPage products">
-                    <Search products={products} onAdd={onAdd} />
+                    <Search products={productList.data} onAdd={onAdd} />
                   </div>
                 </>
               }
