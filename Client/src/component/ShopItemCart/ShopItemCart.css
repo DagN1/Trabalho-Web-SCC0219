@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Ranga&display=swap");
+
+
+.cart-item{
+    font-family: "Rasa", serif;
+    font-style: bold;
+    height: 200px;
+    width: 75%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    font-size: 54px;
+    margin-top: 20px;
+    background-color: #eee;
+    border-radius: 25px;
+}
+
+.pm-button{
+    font-family: sans-serif;
+    font-style: semi-bold;
+    height: 45px;
+    width: 45px;
+    margin: 7px 7px 0px 7px;
+    background-color: white;
+    font-size: 30px;
+    border: 0px;
+    border-radius: 50px;
+}
+
+.cart-item img{
+    width: 150px;
+    height: 150px;
+    padding-left: 10px;
+}
