@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Rasa:ital,wght@0,400;0,700;1,600&display=swap");
+
+
+
+.text-box p {
+    font-size: 32px;
+    padding: 10px 0px;
+    font-weight: 600;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ranga&display=swap');
+
+.img {
+  height: 45px;
+  width: 45px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.logo {
+  height: 52px;
+  width: 45px;
+  margin: 7px 7px 0px 7px;
+}
+
+
+.text {
+  font-family: "Ranga";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 28px;
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+.barra {
+  display: flex;
+  flex-direction: row;
+  background-color: #e1e2e1;
+}
+
+.register{
+    display:flex;
+    flex-direction: row;
+}
+
+.input-text {
+    font-family: "Rasa";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    margin:0px;
+    padding: 0px;
+    display:flex;
+    flex-direction: column;
+  }
+  
+
+input{
+    background-color: #E7E0EC;
+    border: 2px 2px 0px 2px;
+    size: 50px;
+    border-radius: 2px;
+    border: 0;
+    height: 25px;
+    margin: 0px 10px 0px 0px;
+}
+
+.duo-input{
+    display: flex;
+}
+
+.register {
+  
+    font-family: "Rasa", serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-self: center;
+}
+
+.login{
+
+    font-family: "Rasa", serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-self: center;
+}
+
+.register-login{
+    display: flex;
+    box-shadow: 5px 6px 6px -3px rgba(0, 0, 0, 0.43);
+    border-radius: 5px;
+    background-color: #fdfdfd;
+    width: 392px;
+    height: 718px;
+    font-family: "Rasa", serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    padding-top: 20px;
+    align-self: center;
+}
+
+.title{
+    font-family: "Ranga";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 28px;
+    padding: 0px 0px 20px 0px;
+}
+
+.bttn{
+  width: 80px;
+  height: 30px;
+  color:white;
+  background-color: #ff4455;
+  border-radius: 3px;
+  border-color: #ff4455;
+  align-self: flex-end;
+  margin: 20px 30px 0px 0px;
+}
+
+.bttn:hover{
+  background-color: #ff0e22;
+  cursor: pointer;
+}

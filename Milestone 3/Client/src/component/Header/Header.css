@@ -1,0 +1,54 @@
+
+.img {
+    height: 45px;
+    width: 45px;
+    margin-left: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .logo {
+    height: 52px;
+    width: 45px;
+    margin: 7px 7px 0px 7px;
+    cursor: pointer;
+  }
+
+  
+.barra {
+    display: flex;
+    flex-direction: row;
+    background-color: #e1e2e1;
+  }
+
+.texto {
+    width: 30vw;
+    font-family: "Ranga";
+    font-style: normal;
+    font-size: 48px;
+    line-height: 28px;
+    margin-left: 15px;
+    margin-top: 20px;
+    white-space: nowrap;
+    
+  }
+
+  
+.input {
+    background: url(../../images/searchicon.png) no-repeat scroll 6px 6px;
+    padding-left: 15px;
+    margin-left: 34%;
+    width: 400px;
+    height: 45px;
+    border: 0px;
+    margin-top: 10px;
+    margin-right: 100px;
+    padding-left: 60px;
+  }
+  
+  .input input {
+    width: 400px;
+    height: 45px;
+  background-color: white;
+  position: relative;
+}

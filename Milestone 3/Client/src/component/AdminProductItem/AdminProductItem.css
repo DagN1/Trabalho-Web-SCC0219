@@ -1,0 +1,11 @@
+.remove-item{
+    font-family: sans-serif;
+    font-style: semi-bold;
+    height: 45px;
+    width: 45px;
+    margin: 7px 7px 0px 200px;
+    background-color: #F5F5F5;
+    font-size: 20px;
+    border: 0px;
+
+}

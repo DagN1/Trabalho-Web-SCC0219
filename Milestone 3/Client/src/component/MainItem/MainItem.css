@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Ranga&display=swap");
+
+
+.title {
+    font-family: "Ranga";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 28px;
+    margin-left: 15px;
+    margin-top: 20px;
+  }
+
+.main-product .text {
+    font-family: "Rasa";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 28px;
+    margin-left: 15px;
+    margin-top: 20px;
+  }
+
+.barra {
+  display: flex;
+  flex-direction: row;
+  background-color: #e1e2e1;
+}
+
+.your-shopping-cart {
+    font-family: "Jacques Francois", serif;
+    font-style: italic;
+    height: 91px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 54px;
+    margin-top: 16px;
+}
+
+.nothing-in-cart{
+    font-family: "Ranga", serif;
+    font-style: bold;
+    height: 91px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 54px;
+    margin-top: 150px;
+}
+
+.cart-item{
+    font-family: "Rasa", serif;
+    font-style: bold;
+    height: 91px;
+    width: 75%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    font-size: 54px;
+    margin-top: 150px;
+}
+
+.pm-button{
+    height: 45px;
+    width: 45px;
+    margin: 7px 7px 0px 7px;
+}
+  
+  .price {
+    font-size: 28px;
+  }
+
+.item-info{
+    max-width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 999px !important;
+}
+
+.item-description{
+    font-size: 20px;
+    max-width: 40%;
+}
+
+
+.main-product {
+  width: 700px;
+  height: 700px;
+  background-color: #fdfdfd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px 38px;
+  box-shadow: 5px 6px 6px -3px rgba(0, 0, 0, 0.43);
+  border-radius: 5px;
+  padding: 50px 0px;
+  text-align: center;
+
+}
+
+.main-product p {
+  font-size: 30px;
+}
+
+.main-product .price {
+  font-size: 28px;
+}
+
+.main-product a {
+  background-color: #ff4455;
+  color: white;
+  width: 500px;
+  height: 600px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 30px;
+  border-radius: 5px;
+}
+
+.main-product .image-main{
+    height: 400px;
+    width: 400px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.main-view{
+  padding: 50px;
+  height: 80%;
+}
+
+.main-product .text-cart{
+  font-size: 50px;
+}
+
+.addCart{
+  cursor: pointer;
+}
+
+.addCart img{
+  height: 30px;
+  width: 30px;
+}
+
+.products button{
+  background-color: #ff4455;
+  border-radius: 4px;
+  color: #FFFFFF;
+}
