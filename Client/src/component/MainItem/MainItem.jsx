@@ -22,8 +22,8 @@ const MainItem = ({product, onAdd}) => {
 	return (
     <div className="products main-view">
           <div className="main-product">
-            <div><img className="image-main" src={images[product.img]} alt="" /></div>
-            <p>{product.title}</p>
+            <div><img className="image-main" src={product.image} alt="" /></div>
+            <p>{product.name}</p>
             <p className="price">R${product.price}</p>
             <button className="addCart" onClick={() => handleAddToCart()}>
                 <img src={cartImage} alt="" />

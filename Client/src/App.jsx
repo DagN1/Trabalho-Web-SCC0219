@@ -25,8 +25,8 @@ const App = () => {
   const [backendData, setBackendData] = useState([{}]);
   const [productList, setProductList] = useState([]);
 
-  function getProductList() {
-    fetch("http://localhost:5000/listProduct", {
+  async function getProductList() {
+    await fetch("http://localhost:5000/listProduct", {
       method: "POST",
       crossDomain: false,
       headers: {
@@ -43,7 +43,7 @@ const App = () => {
 
   useEffect(() => {
     getProductList();
-  }, []);
+  }, [])
 
   useEffect(() => {
     fetch("api")
@@ -57,11 +57,11 @@ const App = () => {
   const { products } = data;
   const [cartItems, setCartItems] = useState([]);
   const onAdd = (product) => {
-    const exist = cartItems.find((x) => x.id === product.id);
+    const exist = cartItems.find((x) => x._id === product._id);
     if (exist) {
       setCartItems(
         cartItems.map((x) =>
-          x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+          x._id === product._id ? { ...exist, qty: exist.qty + 1 } : x
         )
       );
     } else {
@@ -69,23 +69,25 @@ const App = () => {
     }
   };
   const onRemove = (product) => {
-    const exist = cartItems.find((x) => x.id === product.id);
+    const exist = cartItems.find((x) => x._id === product._id);
     if (exist.qty === 1) {
-      setCartItems(cartItems.filter((x) => x.id !== product.id));
+      setCartItems(cartItems.filter((x) => x._id !== product._id));
     } else {
       setCartItems(
         cartItems.map((x) =>
-          x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
+          x._id === product._id ? { ...exist, qty: exist.qty - 1 } : x
         )
       );
     }
   };
 
   const onDelete = (product) => {
-    setCartItems(cartItems.filter((x) => x.id !== product.id));
+    setCartItems(cartItems.filter((x) => x._id !== product._id));
   };
 
   console.log(cartItems);
+  console.log("")
+  console.log(productList);
 
   return (
     <div>
@@ -103,7 +105,7 @@ const App = () => {
                   )}
                 </p> */}
                 <Header />
-                <Home products={products.slice(0, 5)} onAdd={onAdd} />
+                <Home products={productList.data} onAdd={onAdd} />
               </>
             }
           />
@@ -112,7 +114,7 @@ const App = () => {
             element={
               <>
                 <Header />
-                <ProductDetails products={products} onAdd={onAdd} />
+                <ProductDetails products={productList.data} onAdd={onAdd} />
               </>
             }
           />
@@ -121,7 +123,7 @@ const App = () => {
             element={
               <>
                 <Header />
-                <EditPage products={productList} />
+                <EditPage productList={productList} />
               </>
             }
           />
@@ -132,7 +134,7 @@ const App = () => {
                 <Header />
                 <div className="productsPage products">
                   {/* <Products products={products.slice(0, 5)} onAdd={onAdd} /> */}
-                  <Products products={products} onAdd={onAdd} />
+                  <Products products={productList.data} onAdd={onAdd} />
                 </div>
               </>
             }
@@ -156,7 +158,7 @@ const App = () => {
                 <div className="cartContainer">
                   {cartItems.map((item) => (
                     <ShopItemCart
-                      key={item.id}
+                      key={item._id}
                       item={item}
                       onAdd={onAdd}
                       onRemove={onRemove}

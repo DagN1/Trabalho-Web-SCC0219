@@ -11,7 +11,7 @@ const ProductDetails = ({products, onAdd}) => {
             <Routes>
             
                 {products.map(product => <Route 
-                    path={product.id} element={
+                    path={product._id} element={
                         <MainItem product={product} onAdd={onAdd}/>
                     }
                 />)}

@@ -46,11 +46,11 @@ app.post("/register", async (req, res) => {
   const { name, email, password, adress, phone } = req.body;
   try {
     await User.create({
-      name,
-      email,
-      password,
-      adress,
-      phone,
+      name: name,
+      email: email,
+      password: password,
+      adress: adress,
+      phone: phone,
     });
 
     res.send({ status: "ok" });
@@ -105,12 +105,12 @@ app.post("/createProduct", async (req, res) => {
   if (!product) {
     try {
       await Product.create({
-        name,
-        description,
-        sold,
-        stock,
-        price,
-        image,
+        name: name,
+        description: description,
+        sold: sold,
+        stock: stock,
+        price: price,
+        image: image,
       });
       res.send({ status: "ok" });
     } catch (error) {

@@ -12,7 +12,7 @@ const Home = ({ products, onAdd }) => {
     return navigate("/shoppingPage");
   };
 
-  return (
+  return products === undefined ? (<></>) : (
     <>
       <div className="hero" onClick={handleBannerClick}>
         <img className="img-menu" src={homePageImage} />

@@ -97,6 +97,8 @@ const AdminProductManage = (productList) => {
       });
   };
 
+  console.log(productList);
+
   return (
     <>
       {userName == "admin" ? (

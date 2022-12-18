@@ -19,8 +19,8 @@ const ShopItemCart = (props) => {
 
   return (
     <div className="cart-item">
-      <img src={images[item.img]} alt="generic jeans" />
-      <p>{item.title}</p>
+      <img src={item.image} alt="generic jeans" />
+      <p>{item.name}</p>
       <button
         onClick={() => onAdd(item)}
         className="pm-button"
