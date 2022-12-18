@@ -156,15 +156,45 @@ const AdminProductManage = (productList) => {
               <div>
                 <h1>Register Products</h1>
                 <hr />
-                <table>
-                  <tr>
-                    <th>Id</th>
-                    <th>Email</th>
-                    <th>Remove</th>
-                  </tr>
-                  <AdminUserItem />
-                  <AdminUserItem />
-                </table>
+                name,
+                price,
+                description,
+                stock,
+                sold,
+                image
+                <div className="input-field">
+                  <label className="input-text">
+                    Name
+                    <input onChange={handleName} value={name} className="" />
+                  </label>
+                </div>
+                <div className="input-field">
+                  <label className="input-text">
+                    Price
+                    <input onChange={handlePrice} value={price} className="" />
+                  </label>
+                </div>
+                <div className="input-field">
+                  <label className="input-text">
+                    Description
+                    <input onChange={handleDescription} value={description} className="" />
+                  </label>
+                </div>
+                <div className="input-field">
+                  <label className="input-text">
+                    Stock
+                    <input onChange={handleStock} value={stock} className="" />
+                  </label>
+                </div>
+                <div className="input-field">
+                  <label className="input-text">
+                    Image URL
+                    <input onChange={handleImage} value={image} className="" />
+                  </label>
+                </div>
+                <button onClick={onSubmit} className="bttn">
+                  Create
+                </button>
               </div>
             )}
           </div>

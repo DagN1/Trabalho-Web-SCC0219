@@ -123,7 +123,7 @@ const App = () => {
             element={
               <>
                 <Header />
-                <EditPage productList={productList} />
+                <EditPage productList={productList.data} />
               </>
             }
           />

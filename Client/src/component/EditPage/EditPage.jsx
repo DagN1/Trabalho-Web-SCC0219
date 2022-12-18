@@ -1,12 +1,20 @@
 import React from "react";
 import EditProduct from "../EditProduct/EditProduct";
+import { Route, Routes } from 'react-router-dom';
 
 const EditPage = ({ productList }) => {
+  console.log(productList);
   return (
     <>
-      {productList?.productList?.data?.map((product) => (
-        <EditProduct key={product._id} product={product} />
-      ))}
+        <Routes>
+            
+            {productList.map((product) => (<Route 
+                path={product._id} element={
+                  <EditProduct product={product} />
+                }
+            />))}
+        </Routes>
+      
     </>
   );
 };

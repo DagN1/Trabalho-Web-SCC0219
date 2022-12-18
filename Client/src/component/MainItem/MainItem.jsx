@@ -31,9 +31,8 @@ const MainItem = ({product, onAdd}) => {
             </button>
           </div>
           <div className="item-info">
-            <p className="text item-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea comm</p>
-            <p className="text">Size:<span className="item-size"></span></p>
-            <p className="text">Color:<span className="item-color"></span></p>
+            <p className="text item-description">{product.description}</p>
+            <p className="text">Stock: {product.stock}</p>
           </div>
       </div>
   );
