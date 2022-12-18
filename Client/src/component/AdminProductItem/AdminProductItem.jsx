@@ -16,17 +16,17 @@ const AdminProductItem = ({ item }) => {
   };
 
   return (
-    <div className="product">
-      <div>
+    <div className="product" onClick={() => handleProductClick(item)}
+      style={styles}
+      onMouseEnter={() => {
+        setBorder("1px solid #222");
+      }}
+      onMouseLeave={() => {
+        setBorder("");
+      }} >
+      <div >
         <img
-          style={styles}
-          onMouseEnter={() => {
-            setBorder("1px solid #222");
-          }}
-          onMouseLeave={() => {
-            setBorder("");
-          }}
-          onClick={() => handleProductClick(item)}
+          
           className="productImage"
           src={item.image}
           alt=""

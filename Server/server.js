@@ -137,12 +137,24 @@ app.post("/listProduct", async (req, res) => {
 
 app.post("/deleteProduct/:id", async (req, res) => {
   try {
-    Product.findOneAndRemove(req.params.id)
+    Product.findByIdAndDelete(req.params.id)
       .then(() => {
         res.send({ status: "ok" });
       })
       .catch(() => {
         res.send({ status: "error" });
+      });
+  } catch (error) {}
+});
+
+app.post("/editProduct/:id", async (req, res) => {
+  try {
+    Product.findByIdAndUpdate(req.params.id, req.body)
+      .then((data) => {
+        res.send({ status: "ok", data: data });
+      })
+      .catch((error) => {
+        res.send({ status: "error", data: error });
       });
   } catch (error) {}
 });

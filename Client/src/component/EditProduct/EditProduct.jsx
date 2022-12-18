@@ -40,10 +40,12 @@ const EditProduct = ({ product }) => {
     setImage(e.target.value);
   }
 
-  function deleteProduct(e) {
+  const sold = product.sold;
+
+  const editProduct = (e) => {
     e.preventDefault();
-    console.log("entrando no fetch delete");
-    fetch("http://localhost:5000/deleteProduct/"+product._id, {
+    console.log("entrou no post");
+    fetch("http://localhost:5000/editProduct/" + product._id, {
       method: "POST",
       crossDomain: false,
       headers: {
@@ -52,12 +54,42 @@ const EditProduct = ({ product }) => {
         "Access-Control-Allow-Origin": "*",
       },
       body: JSON.stringify({
-        _id: [product._id],
+        name,
+        price,
+        description,
+        stock,
+        sold,
+        image,
       }),
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log(data, "userRegister");
+        console.log(data.status, "status");
+        if (data.status == "ok") {
+          window.location.href = "http://localhost:3000/Admin";
+        }
+      });
+  };
+
+  async function deleteProduct(e) {
+    e.preventDefault();
+    console.log("entrando no fetch delete");
+    await fetch("http://localhost:5000/deleteProduct/" + product._id, {
+      method: "POST",
+      crossDomain: false,
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
         console.log(data);
+        if (data.status == "ok") {
+          window.location.href = "http://localhost:3000/Admin";
+        }
       });
   }
 
@@ -92,7 +124,7 @@ const EditProduct = ({ product }) => {
             <li>
               <input type="text" value={image} onChange={handleImage}></input>
             </li>
-            <button className="bttn">Editar</button>
+            <button className="bttn" onClick={editProduct}>Editar</button>
             <button className="bttn" onClick={deleteProduct}>Excluir</button>
           </ul>
         </forms>
