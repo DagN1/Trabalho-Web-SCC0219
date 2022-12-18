@@ -135,9 +135,9 @@ app.post("/listProduct", async (req, res) => {
 //   return await Product.db().collection("productInfo").deleteOne({ _id: id });
 // };
 
-app.post("/deleteProduct", async (req, res, id) => {
+app.post("/deleteProduct/:id", async (req, res) => {
   try {
-    Product.deleteOne({ _id: id })
+    Product.findOneAndRemove(req.params.id)
       .then(() => {
         res.send({ status: "ok" });
       })

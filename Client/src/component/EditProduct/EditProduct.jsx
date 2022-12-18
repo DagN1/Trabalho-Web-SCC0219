@@ -8,17 +8,17 @@ const EditProduct = ({ product }) => {
   const [manageProducts, setmanageProducts] = useState(true);
   const [manageUsers, setmanageUsers] = useState(false);
   const [registerProducts, setregisterProducts] = useState(false);
-  const [name, setName] = useState("");
-  const [price, setPrice] = useState("");
-  const [description, setDescription] = useState("");
-  const [stock, setStock] = useState("");
-  const [image, setImage] = useState("");
+  const [name, setName] = useState(product.name);
+  const [price, setPrice] = useState(product.price);
+  const [description, setDescription] = useState(product.description);
+  const [stock, setStock] = useState(product.stock);
+  const [image, setImage] = useState(product.image);
   const [userName, setUserName] = useState("");
   const [productList, setProductList] = useState([]);
 
   //   const currentProduct = window.location.pathname.split("/").pop();
 
-  function deleteProduct() {}
+  // function handleDeleteProduct() {}
 
   function handleName(e) {
     setName(e.target.value);
@@ -40,8 +40,10 @@ const EditProduct = ({ product }) => {
     setImage(e.target.value);
   }
 
-  function deleteProduct() {
-    fetch("http://localhost:5000/deleteProduct", {
+  function deleteProduct(e) {
+    e.preventDefault();
+    console.log("entrando no fetch delete");
+    fetch("http://localhost:5000/deleteProduct/"+product._id, {
       method: "POST",
       crossDomain: false,
       headers: {
@@ -49,6 +51,9 @@ const EditProduct = ({ product }) => {
         Accept: "application/json",
         "Access-Control-Allow-Origin": "*",
       },
+      body: JSON.stringify({
+        _id: [product._id],
+      }),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -60,7 +65,7 @@ const EditProduct = ({ product }) => {
     <div>
       <div className="edit">
         <forms>
-          <p>Criar novo produto</p>
+          <p>Editar Produto</p>
           <ul>
             <label>Nome</label>
             <li>
@@ -87,8 +92,8 @@ const EditProduct = ({ product }) => {
             <li>
               <input type="text" value={image} onChange={handleImage}></input>
             </li>
-            <button className="bttn">Criar Produto</button>
-            <button className="X">X</button>
+            <button className="bttn">Editar</button>
+            <button className="bttn" onClick={deleteProduct}>Excluir</button>
           </ul>
         </forms>
       </div>
