@@ -52,8 +52,9 @@ Then run in the Server folder
 
 The project should be running on: localhost:3000/
 
-For admin login:
-email: admin
+For admin login: 
+
+email: admin 
 password: admin
 
 ### 7. Problems
