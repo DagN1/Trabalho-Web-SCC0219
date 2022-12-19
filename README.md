@@ -52,6 +52,10 @@ Then run in the Server folder
 
 The project should be running on: localhost:3000/
 
+For admin login:
+email: admin
+password: admin
+
 ### 7. Problems
 There are some problems as in the functionality of the website and the organization of the code, there is a lack of logout button for the user and too many css files.
 ### 8. Comments
