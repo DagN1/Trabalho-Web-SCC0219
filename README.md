@@ -36,21 +36,23 @@ or as a slide show https://www.figma.com/proto/MnyLYe5yCZLxmz1epT5qTI/Trabalho-W
 ![drawioTheClothesStore](https://user-images.githubusercontent.com/48655370/195652798-f148bcf5-39b5-4a26-b0c6-6f563f9ca940.png)
 
 ### 3. Comments About the Code
-App.jsx is the root archive of the project, we have divided the code in smaller components for each specific item, each one with it's own css file when needed. 
+App.jsx is the root archive of the project, we have divided the code in smaller components for each specific item, each one with it's own css file, we divided the Client side and Server side into two folders.
 ### 4. Test Plan
 We didn't used any test tool.
 ### 5. Test Results
 From inspecting the pages manually the pages looks manually and most functionalities seem to be working.
 ### 6. Build Procedures
-To run the project after Milestone 2 it's necessary to have a react installation and run the following command on your project folder with package.json,
+To run the project after Milestone 3 it's necessary to have a react installation and run the following command on your project folder with package.json,
  * npm install
 
-After that run:
+After that run in the Client folder
  * npm start 
+Then run in the Server folder
+ * npm run dev
 
 The project should be running on: localhost:3000/
 
 ### 7. Problems
-The user/admin has not been implemented yet as of this message.
+There are some problems as in the functionality of the website and the organization of the code, there is a lack of logout button for the user and too many css files.
 ### 8. Comments
 No comment to be made.
